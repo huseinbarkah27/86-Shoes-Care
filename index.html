@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="86 Shoes Care - Professional shoe cleaning services. Basic cleaning, deep cleaning, and premium treatment for all your footwear needs."
+    />
+    <meta
+      name="keywords"
+      content="shoe cleaning, footwear care, professional shoe service, sneaker cleaning"
+    />
+    <link rel="icon" href="source/img/favicon.jpg" />
+    <title>86 SHOES CARE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <a href="#home"><img src="source/img/86ShoesCare.jpg" alt="" /></a>
+          </div>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#why-choose" class="nav-link">Why Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#services" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#testimonials" class="nav-link">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a href="#location" class="nav-link">Contact</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-greeting">Selamat Datang di</p>
+            <h1 class="hero-title">86 SHOES CARE</h1>
+            <p class="hero-tagline">
+              Laundry Sepatu Premium, dengan Harga Minimum, dan yang terpenting
+              Kualitas Premium.
+            </p>
+            <button class="cta-button" onclick="scrollToSection('services')">
+              Temukan Layanan Kami
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section id="why-choose" class="why-choose">
+        <div class="container">
+          <h2 class="section-title">Mengapa Harus 86 Shoes Care?</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon quality-icon"></div>
+              <h3 class="feature-title">Kualitas Premium</h3>
+              <p class="feature-description">
+                Kami hanya menggunakan produk dan teknik pembersihan terbaik,
+                untuk memastikan sepatu Anda menerima perawatan terbaik.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon experience-icon"></div>
+              <h3 class="feature-title">Berpenglaman</h3>
+              <p class="feature-description">
+                Dengan pengalaman dalam perawatan sepatu, para pekerja terampil
+                kami tahu cara menangani semua jenis sepatu.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon fast-icon"></div>
+              <h3 class="feature-title">Pelayanan yang Cepat</h3>
+              <p class="feature-description">
+                Waktu penyelesaian cepat tanpa mengorbankan kualitas. Sebagian
+                besar layanan diselesaikan dalam 24-48 jam.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon affordable-icon"></div>
+              <h3 class="feature-title">Biaya Terjangkau</h3>
+              <p class="feature-description">
+                Harga kompetitif untuk semua layanan kami. Perawatan sepatu
+                berkualitas yang sangat ramah dikantong.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services">
+        <div class="container">
+          <h2 class="section-title">Layanan Kami</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <h3 class="service-title">Standard Cleaning</h3>
+              <p class="service-description">
+                Pembersihan bagian upper & midsole sepatu <br />
+                (2-3 hari). <br />
+                <span class="service-price">Rp 15.000</span>
+              </p>
+              <button
+                class="service-button"
+                onclick="toggleLayanan(this, 'Standard Cleaning (Rp 15.000)')"
+              >
+                Pilih Layanan
+              </button>
+            </div>
+            <div class="service-card">
+              <h3 class="service-title">Deep Cleaning</h3>
+              <p class="service-description">
+                Pembersihan seluruh bagian sepatu <br />
+                (2-3 hari). <br />
+                <span class="service-price">Rp 20.000</span>
+              </p>
+              <button
+                class="service-button"
+                onclick="toggleLayanan(this, 'Deep Cleaning (Rp 20.000)')"
+              >
+                Pilih Layanan
+              </button>
+            </div>
+            <div class="service-card">
+              <h3 class="service-title">One Day Service</h3>
+              <p class="service-description">
+                Pembersihan seluruh bagian sepatu <br />
+                (1 hari). <br />
+                <span class="service-price">Rp 30.000</span>
+              </p>
+              <button
+                class="service-button"
+                onclick="toggleLayanan(this, 'One day Service (Rp 30.000)')"
+              >
+                Pilih Layanan
+              </button>
+            </div>
+            <div class="service-card">
+              <h3 class="service-title">Unyellowing</h3>
+              <p class="service-description">
+                Mengembalikan warna midsole yang menguning<br />
+                (2-3 hari). <br />
+                <span class="service-price">Rp 35.000</span>
+              </p>
+              <button
+                class="service-button"
+                onclick="toggleLayanan(this, 'Unyellowing (Rp 35.000)')"
+              >
+                Pilih Layanan
+              </button>
+            </div>
+            <div class="service-card">
+              <h3 class="service-title">Repaint - Recolor</h3>
+              <p class="service-description">
+                Mengembalikan warna midsole yang memudar<br />
+                (5-7 hari). <br />
+                <span class="service-price">Rp 50.000 - Rp 80.000</span>
+              </p>
+              <button
+                class="service-button"
+                onclick="toggleLayanan(this, 'Repaint - Recolor (Rp 50.000 - 80.000)')"
+              >
+                Pilih Layanan
+              </button>
+            </div>
+            <div class="service-card">
+              <h3 class="service-title">Pick Up</h3>
+              <p class="service-description">
+                Menyediakan sistem antar jemput gratis disekitar kota Sumbawa
+                dengan minimal pick up 2 pasang sepatu
+              </p>
+            </div>
+            <div style="text-align: center; margin: 20px">
+              <button class="btn" onclick="pesanWhatsApp()">
+                <span>Pesan Sekarang</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials">
+        <div class="container">
+          <h2 class="section-title">Apa Kata Para Pelanggan Kami?</h2>
+          <div class="testimonials-container">
+            <div class="testimonials-wrapper">
+              <div class="testimonial-slide active">
+                <div class="testimonial-content">
+                  <p class="testimonial-text">
+                    "Pelayanan yang luar biasa, cepat dan hasil cukup memuaskan,
+                    juga ramah dikantong. Sudah berapa kali cuci sepatu disini
+                    hasilnya tidak pernah mengecewakan, pokonya worth it deh."
+                  </p>
+                  <div class="testimonial-author">
+                    <h4 class="author-name">Miftah Saputra</h4>
+                    <span class="author-title">Pelari Samawarun</span>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-slide active">
+                <div class="testimonial-content">
+                  <p class="testimonial-text">
+                    "Tempat cuci sepatu andalan Asics Metaspeed saya, soalnya
+                    kalo ditempat lain takut rusak"
+                  </p>
+                  <div class="testimonial-author">
+                    <h4 class="author-name">Ochy Vamps</h4>
+                    <span class="author-title">Perawat</span>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-slide active">
+                <div class="testimonial-content">
+                  <p class="testimonial-text">
+                    "Pokoknya mantap betul cuci sepatu disini"
+                  </p>
+                  <div class="testimonial-author">
+                    <h4 class="author-name">Jalalu said</h4>
+                    <span class="author-title">Mahasiswa</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-controls">
+              <button class="prev-btn" onclick="changeSlide(-1)">&lt;</button>
+              <button class="next-btn" onclick="changeSlide(1)">&gt;</button>
+            </div>
+            <div class="testimonial-dots">
+              <span class="dot active" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location Section -->
+      <section id="location" class="location">
+        <div class="container">
+          <h2 class="section-title">Kunjungi Tempat Kami</h2>
+          <div class="location-content">
+            <div class="location-info">
+              <div class="info-card">
+                <h3 class="info-title">Alamat</h3>
+                <p class="info-text">
+                  Jl.Kebayan, Sumbawa Besar<br />Sumbawa, Nusa Tenggara Barat<br />Indonesia
+                </p>
+              </div>
+              <div class="info-card">
+                <h3 class="info-title">Jam Operasional</h3>
+                <p class="info-text">
+                  Buka Setiap Hari (kalo tutup ntar diinfokan)
+                </p>
+              </div>
+              <div class="info-card">
+                <h3 class="info-title">Info Kontak</h3>
+                <p class="info-text">
+                  Phone: +62 852-3759-9044 <br />WhatsApp: +62 852-3759-9044
+                </p>
+              </div>
+            </div>
+            <div class="map-container">
+              <div id="google-map" class="google-map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d405.9178238496748!2d117.42391258066307!3d-8.485976642387987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMjknMDkuMyJTIDExN8KwMjUnMjUuOSJF!5e1!3m2!1sid!2sid!4v1757942348946!5m2!1sid!2sid"
+                  width="100%"
+                  height="400"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="86 Shoes Care"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Media Section -->
+      <section class="social-media">
+        <div class="container">
+          <h2 class="section-title">Ikuti Sosial Media kami</h2>
+          <div class="social-links">
+            <a
+              href="https://instagram.com/86shoescare.sbw"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link instagram"
+            >
+              <span class="social-icon instagram-icon"></span>
+              <span class="social-text">Instagram</span>
+            </a>
+            <a
+              href="https://facebook.com/anto.xaverius"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link facebook"
+            >
+              <span class="social-icon facebook-icon"></span>
+              <span class="social-text">Facebook</span>
+            </a>
+            <a
+              href="https://tiktok.com/@gracoy_22"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link tiktok"
+            >
+              <span class="social-icon tiktok-icon"></span>
+              <span class="social-text">TikTok</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-text">
+          &copy; <span id="current-year"></span> Bumai D26. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
