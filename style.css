@@ -329,6 +329,24 @@ body {
   font-size: 18px;
 }
 
+.jumlah {
+  margin: 15px;
+}
+
+label {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input[type="number"] {
+  width: 80px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px;
+  text-align: center;
+}
+
 /* Testimonials Section */
 .testimonials {
   padding: 100px 0;

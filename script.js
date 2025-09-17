@@ -88,15 +88,21 @@ function scrollToSection(sectionId) {
 
 let layananDipilih = [];
 
-function toggleLayanan(button, layanan) {
-  if (layananDipilih.includes(layanan)) {
+function toggleLayanan(button, layanan, harga, inputId) {
+  const qtyInput = document.getElementById(inputId);
+  const qty = parseInt(qtyInput.value);
+
+  // cek apakah layanan sudah ada di daftar
+  const index = layananDipilih.findIndex((item) => item.nama === layanan);
+
+  if (index !== -1) {
     // hapus dari daftar
-    layananDipilih = layananDipilih.filter((item) => item !== layanan);
+    layananDipilih.splice(index, 1);
     button.classList.remove("btn-selected");
     button.textContent = "Pilih Layanan";
   } else {
-    // tambah ke daftar
-    layananDipilih.push(layanan);
+    // tambah ke daftar dengan qty & harga
+    layananDipilih.push({ nama: layanan, harga: harga, qty: qty });
     button.classList.add("btn-selected");
     button.textContent = "Dipilih ✔";
   }
@@ -108,10 +114,19 @@ function pesanWhatsApp() {
     return;
   }
 
-  let pesan =
-    "Halo, saya ingin memesan layanan berikut:\n- " +
-    layananDipilih.join("\n- ") +
-    "\n Mohon Informasinya..";
+  let pesan = "Halo, saya ingin memesan layanan berikut:\n";
+  let total = 0;
+
+  layananDipilih.forEach((item) => {
+    let subtotal = item.harga * item.qty;
+    total += subtotal;
+    pesan += `- ${item.nama} (${
+      item.qty
+    } pasang) = Rp ${subtotal.toLocaleString("id-ID")}\n`;
+  });
+
+  pesan += `\nTotal: Rp ${total.toLocaleString("id-ID")}\nMohon informasinya..`;
+
   let url = "https://wa.me/+6285237599044?text=" + encodeURIComponent(pesan);
   window.open(url, "_blank");
 }

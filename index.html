@@ -13,16 +13,37 @@
     />
     <link rel="icon" href="source/img/favicon.jpg" />
     <title>86 SHOES CARE</title>
-    <!-- Open graph meta tags -->
-    <meta property="og:title" content="86 Shoes Care" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta
+      property="og:title"
+      content="86 Shoes Care - Jasa Cuci Sepatu Profesional di Kota Sumbawa"
+    />
     <meta
       property="og:description"
-      content="Jasa Cuci Sepatu Profesional di Kota Sumbawa"
+      content="Kami melayani shoe cleaning, footwear care, dan sneaker cleaning di Kota Sumbawa."
     />
-    <meta property="og:image" content="source/img/86ShoesCare.jpg" />
-    <!-- <meta property="og:url" content="https://your-domain.com" />
+    <meta
+      property="og:image"
+      content="https://86shoescare.vercel.app/source/img/86ShoesCare.jpg"
+    />
+    <meta property="og:url" content="https://86shoescare.vercel.app" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Website Contoh" /> -->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="86 Shoes Care - Jasa Cuci Sepatu Profesional di Kota Sumbawa"
+    />
+    <meta
+      name="twitter:description"
+      content="Kami melayani shoe cleaning, footwear care, dan sneaker cleaning di Kota Sumbawa."
+    />
+    <meta
+      name="twitter:image"
+      content="https://86shoescare.vercel.app/source/img/86ShoesCare.jpg"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -74,8 +95,8 @@
             <p class="hero-greeting">Selamat Datang di</p>
             <h1 class="hero-title">86 SHOES CARE</h1>
             <p class="hero-tagline">
-              Laundry Sepatu Premium, dengan Harga Minimum, dan yang terpenting
-              Kualitas Premium.
+              Jasa laundry Sepatu Premium yang ada di Kota Sumbawa, dengan harga
+              minimum Anda mendapatkan kualitas yang premium.
             </p>
             <button class="cta-button" onclick="scrollToSection('services')">
               Temukan Layanan Kami
@@ -110,7 +131,7 @@
               <h3 class="feature-title">Pelayanan yang Cepat</h3>
               <p class="feature-description">
                 Waktu penyelesaian cepat tanpa mengorbankan kualitas. Sebagian
-                besar layanan diselesaikan dalam 24-48 jam.
+                besar layanan diselesaikan dalam 24-72 jam atau 1-3 hari kerja.
               </p>
             </div>
             <div class="feature-card">
@@ -133,27 +154,24 @@
             <div class="service-card">
               <h3 class="service-title">Standard Cleaning</h3>
               <p class="service-description">
-                Pembersihan bagian upper & midsole sepatu <br />
-                (2-3 hari). <br />
-                <span class="service-price">Rp 15.000</span>
-              </p>
-              <button
-                class="service-button"
-                onclick="toggleLayanan(this, 'Standard Cleaning (Rp 15.000)')"
-              >
-                Pilih Layanan
-              </button>
-            </div>
-            <div class="service-card">
-              <h3 class="service-title">Deep Cleaning</h3>
-              <p class="service-description">
-                Pembersihan seluruh bagian sepatu <br />
+                Pembersihan bagian upper, midsole & outsole <br />
                 (2-3 hari). <br />
                 <span class="service-price">Rp 20.000</span>
               </p>
+              <div class="jumlah">
+                <label for="qty-standard">Jumlah:</label>
+                <input
+                  type="number"
+                  id="qty-standard"
+                  value="1"
+                  min="1"
+                  style="width: 60px; text-align: center; margin-left: 5px"
+                />
+              </div>
+
               <button
                 class="service-button"
-                onclick="toggleLayanan(this, 'Deep Cleaning (Rp 20.000)')"
+                onclick="toggleLayanan(this, 'Standard Cleaning', 20000, 'qty-standard')"
               >
                 Pilih Layanan
               </button>
@@ -161,13 +179,47 @@
             <div class="service-card">
               <h3 class="service-title">One Day Service</h3>
               <p class="service-description">
-                Pembersihan seluruh bagian sepatu <br />
+                Pembersihan bagian upper, midsole, outsole, insole & perfume<br />
                 (1 hari). <br />
                 <span class="service-price">Rp 30.000</span>
               </p>
+              <div class="jumlah">
+                <label for="qty-oneDay">Jumlah:</label>
+                <input
+                  type="number"
+                  id="qty-oneDay"
+                  value="1"
+                  min="1"
+                  style="width: 60px; text-align: center; margin-left: 5px"
+                />
+              </div>
               <button
                 class="service-button"
-                onclick="toggleLayanan(this, 'One day Service (Rp 30.000)')"
+                onclick="toggleLayanan(this, 'One Day Service', 30000, 'qty-oneDay')"
+              >
+                Pilih Layanan
+              </button>
+            </div>
+            <div class="service-card">
+              <h3 class="service-title">White Shoe Cleaning</h3>
+              <p class="service-description">
+                Pembersihan bagian upper, midsole, outsole, insole & perfume<br />
+                (2-3 hari). <br />
+                <span class="service-price">Rp 25.000</span>
+              </p>
+              <div class="jumlah">
+                <label for="qty-white">Jumlah:</label>
+                <input
+                  type="number"
+                  id="qty-white"
+                  value="1"
+                  min="1"
+                  style="width: 60px; text-align: center; margin-left: 5px"
+                />
+              </div>
+              <button
+                class="service-button"
+                onclick="toggleLayanan(this, 'White Shoe Cleaning', 25000, 'qty-white')"
               >
                 Pilih Layanan
               </button>
@@ -177,11 +229,21 @@
               <p class="service-description">
                 Mengembalikan warna midsole yang menguning<br />
                 (2-3 hari). <br />
-                <span class="service-price">Rp 35.000</span>
+                <span class="service-price">Rp 50.000</span>
               </p>
+              <div class="jumlah">
+                <label for="qty-yellow">Jumlah:</label>
+                <input
+                  type="number"
+                  id="qty-yellow"
+                  value="1"
+                  min="1"
+                  style="width: 60px; text-align: center; margin-left: 5px"
+                />
+              </div>
               <button
                 class="service-button"
-                onclick="toggleLayanan(this, 'Unyellowing (Rp 35.000)')"
+                onclick="toggleLayanan(this, 'Unyellowing', 50000, 'qty-yellow')"
               >
                 Pilih Layanan
               </button>
@@ -191,11 +253,21 @@
               <p class="service-description">
                 Mengembalikan warna midsole yang memudar<br />
                 (5-7 hari). <br />
-                <span class="service-price">Rp 50.000 - Rp 80.000</span>
+                <span class="service-price">Rp 80.000 - Rp 100.000</span>
               </p>
+              <div class="jumlah">
+                <label for="qty-repaint">Jumlah:</label>
+                <input
+                  type="number"
+                  id="qty-repaint"
+                  value="1"
+                  min="1"
+                  style="width: 60px; text-align: center; margin-left: 5px"
+                />
+              </div>
               <button
                 class="service-button"
-                onclick="toggleLayanan(this, 'Repaint - Recolor (Rp 50.000 - 80.000)')"
+                onclick="toggleLayanan(this, 'Repaint - Recolor', 80000, 'qty-repaint')"
               >
                 Pilih Layanan
               </button>
